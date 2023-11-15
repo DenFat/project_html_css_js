@@ -161,9 +161,43 @@
 // }
 // console.log(arrayOfNumbers);
 
-for (let i = 20; i > 9; i--) {
-    if (i === 13) {
-        break;
-    }
-    console.log(i);
+// for (let i = 20; i > 9; i--) {
+//     if (i === 13) {
+//         break;
+//     }
+//     console.log(i);
+// }
+
+const arr = [3, 5, 8, 16, 20, 23, 50];
+const result = [];
+for (let i in arr) {
+    result[i] = arr[i];
 }
+
+const data = [5, 10, 'Shopping', 20, 'Homework'];
+for (let i in data) {
+    if (typeof(data[i]) == "string") {
+        data[i] = data[i] + " - done"
+    } else {
+        data[i] = data[i] * 2
+    }  
+}
+
+const data = [5, 10, 'Shopping', 20, 'Homework'];
+const result = [];
+for( let i = 1; i <= data.length; i++) {
+    result[i - 1] = data[data.length - i]
+}
+
+const lines = 5;
+let result = '';
+for (let i = 0; i <= lines; i++){
+    for (let j = 0; j <= lines - i; j++){
+        result +=" ";
+    }
+    for (let j = 0; j < 2 * i + 1; j++){
+        result +="*"
+    }
+    result += "\n";
+}
+console.log(result);
