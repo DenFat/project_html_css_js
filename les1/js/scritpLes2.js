@@ -168,36 +168,93 @@
 //     console.log(i);
 // }
 
-const arr = [3, 5, 8, 16, 20, 23, 50];
-const result = [];
-for (let i in arr) {
-    result[i] = arr[i];
+// const arr = [3, 5, 8, 16, 20, 23, 50];
+// const result = [];
+// for (let i in arr) {
+//     result[i] = arr[i];
+// }
+
+// const data = [5, 10, 'Shopping', 20, 'Homework'];
+// for (let i in data) {
+//     if (typeof(data[i]) == "string") {
+//         data[i] = data[i] + " - done"
+//     } else {
+//         data[i] = data[i] * 2
+//     }  
+// }
+
+// const data = [5, 10, 'Shopping', 20, 'Homework'];
+// const result = [];
+// for( let i = 1; i <= data.length; i++) {
+//     result[i - 1] = data[data.length - i]
+// }
+
+// const lines = 5;
+// let result = '';
+// for (let i = 0; i <= lines; i++){
+//     for (let j = 0; j <= lines - i; j++){
+//         result +=" ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++){
+//         result +="*"
+//     }
+//     result += "\n";
+// }
+// console.log(result);
+
+// function  showFirstMassage(text) {
+//     console.log(text);
+//     let num = 20;
+ 
+
+// }
+
+// showFirstMassage("Hello");
+// console.log(num);
+
+// function calc(a ,b) {
+//     return a + b;
+// }
+// console.log(calc(2,8))
+
+// const logger = function() {
+//     console.log("Hello")
+// };
+
+// logger()
+
+
+// const calc = (a , b) => a + b;
+
+// const usdCurr = 28;
+// const eurCurr = 32;
+// const discont = 0.9;
+
+// function convert(amounth, curr) {
+//     return curr * amounth;
+// }
+// function promotion(result) {
+//     console.log(result * discont)
+// }
+// x
+// promotion(convert(500, usdCurr));
+
+// function doNothing() {};
+// console.log(doNothing() === undefined);
+
+function sayHello(name) {
+    return console.log(`Привет, ${name}!`)
 }
 
-const data = [5, 10, 'Shopping', 20, 'Homework'];
-for (let i in data) {
-    if (typeof(data[i]) == "string") {
-        data[i] = data[i] + " - done"
-    } else {
-        data[i] = data[i] * 2
-    }  
+function returnNeighboringNumbers(number) {
+    return console.log([number - 1, number, number + 1])
 }
 
-const data = [5, 10, 'Shopping', 20, 'Homework'];
-const result = [];
-for( let i = 1; i <= data.length; i++) {
-    result[i - 1] = data[data.length - i]
-}
-
-const lines = 5;
-let result = '';
-for (let i = 0; i <= lines; i++){
-    for (let j = 0; j <= lines - i; j++){
-        result +=" ";
+function getMathResult(base, repeat) {
+    for (i in repeat) {
+        let rez = "" 
+        rez = (`${base * i}---`) 
     }
-    for (let j = 0; j < 2 * i + 1; j++){
-        result +="*"
-    }
-    result += "\n";
+    return console.log(rez)
 }
-console.log(result);
+getMathResult(2,3)
