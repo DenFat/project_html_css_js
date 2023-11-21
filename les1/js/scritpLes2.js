@@ -243,18 +243,30 @@
 // console.log(doNothing() === undefined);
 
 function sayHello(name) {
-    return console.log(`Привет, ${name}!`)
+	return `Привет, ${name}!`;
 }
+
+sayHello("Denis");
 
 function returnNeighboringNumbers(number) {
-    return console.log([number - 1, number, number + 1])
+	return [number - 1, number, number + 1];
 }
 
+returnNeighboringNumbers(4);
+
 function getMathResult(base, repeat) {
-    for (i in repeat) {
-        let rez = "" 
-        rez = (`${base * i}---`) 
-    }
-    return console.log(rez)
+	let rezult = "";
+	if(typeof(repeat) == "string" || repeat <= 0){
+		rezult = base;
+		return rezult;
+	}
+	for (let i = 1; i <= repeat; i++){
+		if(i === repeat){
+			rezult += (base * i);
+		} else {
+			rezult += ((base * i) + "---");
+		}
+	}
+	return rezult;
 }
-getMathResult(2,3)
+console.log(getMathResult(3,-3));
