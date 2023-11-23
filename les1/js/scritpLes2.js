@@ -242,31 +242,91 @@
 // function doNothing() {};
 // console.log(doNothing() === undefined);
 
-function sayHello(name) {
-	return `Привет, ${name}!`;
-}
+// function sayHello(name) {
+// 	return `Привет, ${name}!`;
+// }
 
-sayHello("Denis");
+// sayHello("Denis");
 
-function returnNeighboringNumbers(number) {
-	return [number - 1, number, number + 1];
-}
+// function returnNeighboringNumbers(number) {
+// 	return [number - 1, number, number + 1];
+// }
 
-returnNeighboringNumbers(4);
+// returnNeighboringNumbers(4);
 
-function getMathResult(base, repeat) {
-	let rezult = "";
-	if(typeof(repeat) == "string" || repeat <= 0){
-		rezult = base;
-		return rezult;
+// function getMathResult(base, repeat) {
+// 	let rezult = "";
+// 	if(typeof(repeat) == "string" || repeat <= 0){
+// 		rezult = base;
+// 		return rezult;
+// 	}
+// 	for (let i = 1; i <= repeat; i++){
+// 		if(i === repeat){
+// 			rezult += (base * i);
+// 		} else {
+// 			rezult += ((base * i) + "---");
+// 		}
+// 	}
+// 	return rezult;
+// }
+// console.log(getMathResult(3,-3));
+
+function calculateVolumeAndArea(num) {
+	while (num != parseInt(num) || num <= 0 || typeof(num) === "string") {
+		return console.log("При вычислении произошла ошибка");
 	}
-	for (let i = 1; i <= repeat; i++){
-		if(i === repeat){
-			rezult += (base * i);
-		} else {
-			rezult += ((base * i) + "---");
-		}
-	}
-	return rezult;
+	let area = 6 * (num * num);
+	let volume = num * num * num;
+	return console.log(`Объем куба: ${volume}, площадь всей поверхности: ${area}`);
 }
-console.log(getMathResult(3,-3));
+calculateVolumeAndArea(15.5);
+
+let num = "15";
+console.log(typeof(num));
+
+function getCoupeNumber(num) {
+	if (num != parseInt(num) || num < 0) {
+		return console.log("Ошибка. Проверьте правильность введенного номера места");
+	}
+	if (num === 0 || num > 36) {
+		return console.log("Таких мест в вагоне не существует");
+	}
+	let coupe = parseInt(num / 4);
+	return console.log(coupe+1);
+}
+getCoupeNumber("Hello");
+
+function getTimeFromMinutes(num) {
+	if(num != parseInt(num) || num < 0 || typeof(num) === "string") {
+		return console.log("Ошибка, проверьте данные");
+	}
+	let time = "";
+	let timeH = "";
+	let timeM = "";
+	let hours = parseInt(num / 60);
+	let minutes = num - (60 * hours);
+	if(hours === 1){
+		timeH = `Это ${hours} час`;
+	} else if(hours >= 2 && hours <= 4) {
+		timeH = `Это ${hours} часa`;
+	} else {
+		timeH = `Это ${hours} часов`;
+	}
+	if(minutes === 1) {
+		timeM =  ` и ${minutes} минутa`;
+	} else if(minutes >=2 && minutes <=4) {
+		timeM =  ` и ${minutes} минуты`;
+	} else {
+		timeM =  ` и ${minutes} минут`;
+	}
+	return console.log(timeH + timeM);
+}
+getTimeFromMinutes(-150);
+
+function findMaxNumber(num1, num2, num3, num4) {
+	if (typeof(num1) != "number" || typeof(num2) != "number" || typeof(num3) != "number" || typeof(num4) != "number") {
+		return 0;
+	}
+	return console.log(Math.max(num1, num2, num3, num4));
+}
+findMaxNumber(1, 2, 3, 5.9);
