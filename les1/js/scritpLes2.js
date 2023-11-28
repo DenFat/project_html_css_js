@@ -271,62 +271,111 @@
 // }
 // console.log(getMathResult(3,-3));
 
-function calculateVolumeAndArea(num) {
-	while (num != parseInt(num) || num <= 0 || typeof(num) === "string") {
-		return console.log("При вычислении произошла ошибка");
-	}
-	let area = 6 * (num * num);
-	let volume = num * num * num;
-	return console.log(`Объем куба: ${volume}, площадь всей поверхности: ${area}`);
-}
-calculateVolumeAndArea(15.5);
+// function calculateVolumeAndArea(num) {
+// 	while (num != parseInt(num) || num <= 0 || typeof(num) === "string") {
+// 		return console.log("При вычислении произошла ошибка");
+// 	}
+// 	let area = 6 * (num * num);
+// 	let volume = num * num * num;
+// 	return console.log(`Объем куба: ${volume}, площадь всей поверхности: ${area}`);
+// }
+// calculateVolumeAndArea(15.5);
 
-let num = "15";
-console.log(typeof(num));
+// let num = "15";
+// console.log(typeof(num));
 
-function getCoupeNumber(num) {
-	if (num != parseInt(num) || num < 0) {
-		return console.log("Ошибка. Проверьте правильность введенного номера места");
-	}
-	if (num === 0 || num > 36) {
-		return console.log("Таких мест в вагоне не существует");
-	}
-	let coupe = parseInt(num / 4);
-	return console.log(coupe+1);
-}
-getCoupeNumber("Hello");
+// function getCoupeNumber(num) {
+// 	if (num != parseInt(num) || num < 0) {
+// 		return console.log("Ошибка. Проверьте правильность введенного номера места");
+// 	}
+// 	if (num === 0 || num > 36) {
+// 		return console.log("Таких мест в вагоне не существует");
+// 	}
+// 	let coupe = parseInt(num / 4);
+// 	return console.log(coupe+1);
+// }
+// getCoupeNumber("Hello");
 
-function getTimeFromMinutes(num) {
-	if(num != parseInt(num) || num < 0 || typeof(num) === "string") {
-		return console.log("Ошибка, проверьте данные");
-	}
-	let time = "";
-	let timeH = "";
-	let timeM = "";
-	let hours = parseInt(num / 60);
-	let minutes = num - (60 * hours);
-	if(hours === 1){
-		timeH = `Это ${hours} час`;
-	} else if(hours >= 2 && hours <= 4) {
-		timeH = `Это ${hours} часa`;
-	} else {
-		timeH = `Это ${hours} часов`;
-	}
-	if(minutes === 1) {
-		timeM =  ` и ${minutes} минутa`;
-	} else if(minutes >=2 && minutes <=4) {
-		timeM =  ` и ${minutes} минуты`;
-	} else {
-		timeM =  ` и ${minutes} минут`;
-	}
-	return console.log(timeH + timeM);
-}
-getTimeFromMinutes(-150);
+// function getTimeFromMinutes(num) {
+// 	if(num != parseInt(num) || num < 0 || typeof(num) === "string") {
+// 		return console.log("Ошибка, проверьте данные");
+// 	}
+// 	let time = "";
+// 	let timeH = "";
+// 	let timeM = "";
+// 	let hours = parseInt(num / 60);
+// 	let minutes = num - (60 * hours);
+// 	if(hours === 1){
+// 		timeH = `Это ${hours} час`;
+// 	} else if(hours >= 2 && hours <= 4) {
+// 		timeH = `Это ${hours} часa`;
+// 	} else {
+// 		timeH = `Это ${hours} часов`;
+// 	}
+// 	if(minutes === 1) {
+// 		timeM =  ` и ${minutes} минутa`;
+// 	} else if(minutes >=2 && minutes <=4) {
+// 		timeM =  ` и ${minutes} минуты`;
+// 	} else {
+// 		timeM =  ` и ${minutes} минут`;
+// 	}
+// 	return console.log(timeH + timeM);
+// }
+// getTimeFromMinutes(-150);
 
-function findMaxNumber(num1, num2, num3, num4) {
-	if (typeof(num1) != "number" || typeof(num2) != "number" || typeof(num3) != "number" || typeof(num4) != "number") {
-		return 0;
-	}
-	return console.log(Math.max(num1, num2, num3, num4));
-}
-findMaxNumber(1, 2, 3, 5.9);
+// function findMaxNumber(num1, num2, num3, num4) {
+// 	if (typeof(num1) != "number" || typeof(num2) != "number" || typeof(num3) != "number" || typeof(num4) != "number") {
+// 		return 0;
+// 	}
+// 	return console.log(Math.max(num1, num2, num3, num4));
+// }
+// findMaxNumber(1, 2, 3, 5.9);
+
+// function fib(num) {
+//     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
+
+//     let result = '';
+//     let first = 0;
+//     let second = 1;
+
+//     for (let i = 0; i < num; i++) {
+//         if (i + 1 === num) {
+//             result += `${first}`;
+//             // Без пробела в конце
+//         } else {
+//             result += `${first} `;
+//         }
+
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
+
+//     return result;
+// }
+
+// console.log(fib(5));
+
+// function fibt(num) {
+// 	if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
+// 	let result = "";
+// 	let p1 = 0;
+// 	let p2 = 1;
+// 	for (let i = 0; i < num; i++) {
+// 		if (i+1 === num) {
+// 			result += `${p1}`;
+// 		} else {
+// 			result += `${p1} `;
+// 		}
+// 		let p3 = p1 + p2;
+// 		p1 = p2;
+// 		p2 = p3;
+// 	}
+// 	return result;
+// }
+// console.log(fibt(7));
+
