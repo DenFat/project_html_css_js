@@ -234,25 +234,55 @@
 // console.log(showExperience(personalPlanPeter));
 // console.log(showProgrammingLangs(personalPlanPeter));
 
-const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
-function showFamily(arr) {
-    let str = "Семья состоит из:";
-    if(arr.length === 0){
-        return "Семья пуста";
-    }
-    for(let key in arr){
-        str += ` ${arr[key]}`;
-    }
-    return str;
-}
-console.log(showFamily(family));
+// function showFamily(arr) {
+//     let str = "Семья состоит из:";
+//     if(arr.length === 0){
+//         return "Семья пуста";
+//     }
+//     for(let key in arr){
+//         str += ` ${arr[key]}`;
+//     }
+//     return str;
+// }
+// console.log(showFamily(family));
 
-const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
-function standardizeStrings(arr) {
-    for(let key in arr){
-        console.log(favoriteCities[key].toLowerCase());
-    }
-}
-standardizeStrings(favoriteCities);
+// function standardizeStrings(arr) {
+//     for(let key in arr){
+//         console.log(favoriteCities[key].toLowerCase());
+//     }
+// }
+// standardizeStrings(favoriteCities);
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     if (typeof(str) != "string"){
+//         return "Ошибка!";
+//     }
+//     const string = str.split("");
+//     const revst = string.reverse();
+//     const result = revst.join("");
+//     return result;
+// }
+// console.log(reverse(someString));
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//     let result = "";
+    
+//     for(let i = 0; i < arr.length;i++){
+//         if(arr[i] === missingCurr){
+//             continue;
+//         }
+//         result += `${arr[i]}\n`;
+//     }
+//     return result;
+// }
+// let result = [...baseCurrencies,...additionalCurrencies];
+// console.log(availableCurr(result,"CNY"));
